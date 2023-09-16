@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+    
+
+{% block content %}
+    {% include 'components/breadcrumb.html' with obj=post title='Новости' path='home' %}
+    <div class="container">
+        <img src="{{post.image.url}}" alt="">
+        <div class="content" style="margin-top: 20px;">
+            <h2 style="text-align: center;">{{post.title}}</h2>
+            <p>{{post.description}}</p>
+        </div>
+    </div>
+{% endblock content %}

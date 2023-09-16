@@ -1,0 +1,10 @@
+
+<div class="col">
+    <div class="card" style="width: 20rem; font-size: small;">
+        <img src="{{card.image.url}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <a href="{{card.get_absolute_url}}" class="nav-link"><h6>{{card.title}}</h6></a>
+          <p class="card-text">{{card.description|truncatechars:200}}</p>
+        </div>
+    </div>
+</div>

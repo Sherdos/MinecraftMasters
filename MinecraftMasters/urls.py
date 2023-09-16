@@ -2,12 +2,11 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-from posts.views import PostAPIView
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api-auth/', include('rest_framework.urls')),
-    path('', PostAPIView.as_view())
+    path('', include('posts.urls'))
 ]
 
 if settings.DEBUG:
